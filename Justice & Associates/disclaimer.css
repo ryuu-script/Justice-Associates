@@ -1,0 +1,211 @@
+/* disclaimer.css — disclaimer-specific styles ONLY.
+   Link main.css FIRST so all shared styles (variables, header,
+   footer, nav, sidebar, theme toggle, base reset) come from there. */
+
+/* ===== DISCLAIMER HERO ===== */
+.disclaimer-hero {
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(255, 214, 0, 0.08) 0%, rgba(116, 192, 252, 0.06) 100%),
+              rgba(18, 20, 28, 0.7);
+  border: 1px solid rgba(255, 214, 0, 0.18);
+  padding: 3.5rem 2rem;
+  margin-bottom: 2.5rem;
+  backdrop-filter: blur(14px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* decorative legal symbol watermark */
+.disclaimer-hero::before {
+  content: "RyuuScript";
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  font-size: 8rem;
+  font-weight: 900;
+  color: var(--brand);
+  opacity: 0.06;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero-inner {
+  max-width: 720px;
+}
+
+.hero-eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand);
+  opacity: 0.9;
+}
+
+.hero-title {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.1;
+}
+
+.hero-meta {
+  margin: 0 0 1.25rem;
+  font-size: 0.88rem;
+  opacity: 0.6;
+}
+
+.hero-lead {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.88;
+  max-width: 640px;
+}
+
+/* ===== DISCLAIMER SECTIONS ===== */
+.disclaimer-body {
+  display: grid;
+  gap: 0;
+}
+
+.disc-section {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 1.25rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.75s ease;
+}
+
+.disc-section:first-child {
+  padding-top: 0;
+}
+
+.disc-index {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--brand);
+  opacity: 0.7;
+  padding-top: 0.35rem;
+  white-space: nowrap;
+}
+
+.disc-content h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.disc-content p {
+  margin: 0;
+  line-height: 1.75;
+  opacity: 0.88;
+}
+
+/* ===== CONTACT CARD ===== */
+.disc-contact {
+  margin-top: 2.5rem;
+  background: rgba(18, 20, 28, 0.6);
+  border: 1px solid rgba(232, 234, 240, 0.08);
+  border-radius: var(--radius);
+  padding: 2rem;
+  transition: background 0.75s ease, border-color 0.75s ease;
+}
+
+.disc-contact h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1.25rem;
+}
+
+.disc-contact > p {
+  margin: 0 0 1.5rem;
+  opacity: 0.85;
+  line-height: 1.65;
+}
+
+.contact-card {
+  font-style: normal;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: baseline;
+  padding: 0.65rem 0.9rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.contact-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brand);
+  opacity: 0.8;
+  min-width: 70px;
+}
+
+/* ===== LIGHT MODE — disclaimer-specific overrides only ===== */
+:root[data-theme="light"] .disclaimer-hero {
+  background: linear-gradient(135deg, rgba(212, 165, 0, 0.08) 0%, rgba(28, 126, 214, 0.06) 100%),
+              rgba(255, 255, 255, 0.8);
+  border-color: rgba(212, 165, 0, 0.3);
+}
+
+:root[data-theme="light"] .disc-section {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+:root[data-theme="light"] .disc-contact {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(14px);
+}
+
+:root[data-theme="light"] .contact-row {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+/* ===== MOBILE — disclaimer-specific only ===== */
+@media (max-width: 880px) {
+  .disclaimer-hero {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .disclaimer-hero::before {
+    font-size: 5rem;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  .disc-section {
+    grid-template-columns: 44px 1fr;
+    gap: 0.75rem;
+    padding: 1.5rem 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .disc-section {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+
+  .disc-index {
+    font-size: 0.7rem;
+    padding-top: 0;
+  }
+
+  .contact-row {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}

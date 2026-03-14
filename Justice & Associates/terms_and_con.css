@@ -1,0 +1,315 @@
+/* ===== TERMS HERO ===== */
+.terms-hero {
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(255, 214, 0, 0.08) 0%, rgba(116, 192, 252, 0.06) 100%),
+              rgba(18, 20, 28, 0.7);
+  border: 1px solid rgba(255, 214, 0, 0.18);
+  padding: 3.5rem 2rem;
+  margin-bottom: 2.5rem;
+  backdrop-filter: blur(14px);
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* decorative watermark */
+.terms-hero::before {
+  content: "RyuuScript";
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  font-size: 9rem;
+  font-weight: 900;
+  color: var(--brand);
+  opacity: 0.04;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.05em;
+}
+
+.hero-inner {
+  max-width: 640px;
+}
+
+.hero-eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand);
+  opacity: 0.9;
+}
+
+.hero-title {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.1;
+}
+
+.hero-meta {
+  margin: 0 0 1.25rem;
+  font-size: 0.88rem;
+  opacity: 0.6;
+}
+
+.hero-lead {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.88;
+}
+
+/* ===== TABLE OF CONTENTS ===== */
+.toc {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  min-width: 200px;
+  max-width: 240px;
+  align-self: start;
+  position: sticky;
+  top: 5rem;
+  flex-shrink: 0;
+  transition: background 0.75s ease, border-color 0.75s ease;
+}
+
+.toc-label {
+  margin: 0 0 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+.toc-list {
+  margin: 0;
+  padding: 0 0 0 1.1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.toc-list li {
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.toc-list a {
+  color: var(--text);
+  opacity: 0.75;
+  transition: opacity 160ms ease, color 160ms ease;
+  text-decoration: none;
+}
+
+.toc-list a:hover {
+  opacity: 1;
+  color: var(--brand);
+  text-decoration: none;
+}
+
+/* ===== TERMS BODY ===== */
+.terms-body {
+  display: grid;
+  gap: 0;
+}
+
+/* ===== INDIVIDUAL SECTION ===== */
+.term-section,
+.term-contact {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 1.25rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.75s ease;
+}
+
+.term-section:first-child {
+  padding-top: 0;
+}
+
+.term-index {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--brand);
+  opacity: 0.7;
+  padding-top: 0.35rem;
+  white-space: nowrap;
+}
+
+.term-content h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.term-content p {
+  margin: 0 0 0.85rem;
+  line-height: 1.75;
+  opacity: 0.88;
+}
+
+.term-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== BULLET LIST ===== */
+.term-list {
+  margin: 0.65rem 0 0.85rem;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.term-list li {
+  line-height: 1.6;
+  opacity: 0.88;
+}
+
+.term-list li::marker {
+  color: var(--brand);
+}
+
+/* ===== CONTACT CARD ===== */
+.term-contact {
+  border-bottom: none;
+}
+
+.contact-card {
+  font-style: normal;
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: baseline;
+  padding: 0.65rem 0.9rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.contact-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brand);
+  opacity: 0.8;
+  min-width: 70px;
+}
+
+/* ===== COPYRIGHT LINE ===== */
+.terms-copyright {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.88rem;
+  opacity: 0.55;
+  text-align: center;
+  transition: border-color 0.75s ease;
+}
+
+/* ===== LIGHT MODE — terms-specific overrides only ===== */
+:root[data-theme="light"] .terms-hero {
+  background: linear-gradient(135deg, rgba(212, 165, 0, 0.08) 0%, rgba(28, 126, 214, 0.06) 100%),
+              rgba(255, 255, 255, 0.85);
+  border-color: rgba(212, 165, 0, 0.3);
+}
+
+:root[data-theme="light"] .toc {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+:root[data-theme="light"] .toc-list a {
+  color: #12141a;
+}
+
+:root[data-theme="light"] .toc-list a:hover {
+  color: var(--brand);
+}
+
+:root[data-theme="light"] .term-section,
+:root[data-theme="light"] .term-contact {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+:root[data-theme="light"] .contact-row {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+:root[data-theme="light"] .terms-copyright {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ===== MOBILE — terms-specific only ===== */
+@media (max-width: 880px) {
+  .terms-hero {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 1.25rem;
+    gap: 1.5rem;
+  }
+
+  .terms-hero::before {
+    font-size: 6rem;
+    bottom: -0.5rem;
+    right: 1rem;
+  }
+
+  /* TOC becomes horizontal scroll strip on mobile */
+  .toc {
+    position: static;
+    min-width: unset;
+    max-width: 100%;
+    padding: 1rem 1.25rem;
+  }
+
+  .toc-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.25rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .toc-list li {
+    font-size: 0.82rem;
+  }
+
+  .term-section,
+  .term-contact {
+    grid-template-columns: 44px 1fr;
+    gap: 0.75rem;
+    padding: 1.5rem 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .term-section,
+  .term-contact {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+
+  .term-index {
+    font-size: 0.7rem;
+    padding-top: 0;
+  }
+
+  .contact-row {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}

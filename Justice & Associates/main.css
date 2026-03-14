@@ -227,7 +227,7 @@ main {
 
 .top-redirect:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 20px rgba(255, 214, 0, 0.22);
+  box-shadow: 0 0px 20px rgba(255, 214, 0, 0.22);
 }
 
 .verdict-bottom {
@@ -544,6 +544,11 @@ footer .feet-links a:hover {
 
 :root[data-theme="light"] .top-redirect {
   background: #74c0fc;
+}
+
+:root[data-theme="light"] .top-redirect:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0px 20px#74c1fcd5
 }
 
 :root[data-theme="light"] .theme-toggle {
