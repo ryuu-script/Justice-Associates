@@ -1,7 +1,3 @@
-/* disclaimer.css — disclaimer-specific styles ONLY.
-   Link main.css FIRST so all shared styles (variables, header,
-   footer, nav, sidebar, theme toggle, base reset) come from there. */
-
 /* ===== DISCLAIMER HERO ===== */
 .disclaimer-hero {
   border-radius: 1rem;
