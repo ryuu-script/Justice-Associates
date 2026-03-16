@@ -341,6 +341,7 @@ main {
 }
 
 .partners-law_card {
+  flex: 0 0 240px;  
   border: 1px solid rgba(232, 234, 240, 0.08);
   border-radius: var(--radius);
   background: rgba(18, 20, 28, 0.55);
@@ -803,4 +804,16 @@ footer .feet-links a:hover {
   footer .feet-links {
     justify-content: center;
   }
+}
+
+
+.map-container {
+  margin-top: 2rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(232,234,240,0.12);
+}
+
+:root[data-theme="light"] .map-container {
+  border: 1px solid rgba(0,0,0,0.15);
 }
