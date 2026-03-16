@@ -122,7 +122,8 @@ nav {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
 
@@ -329,10 +330,14 @@ main {
 }
 
 .partners-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 1.25rem;
   margin-top: 1.5rem;
+}
+
+.partners-law_card {
+  flex: 1 1 225px;
 }
 
 .partners-law_card {
@@ -369,7 +374,8 @@ main {
 
 .partners-law_card figure {
   margin: 0;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 0.75rem;
   text-align: center;
 }
@@ -392,7 +398,8 @@ main {
 }
 
 .deposition-form {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
   background: rgba(18, 20, 28, 0.55);
   border: 1px solid rgba(232, 234, 240, 0.08);
